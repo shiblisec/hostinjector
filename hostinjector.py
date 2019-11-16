@@ -31,28 +31,20 @@ def prBanner():
 	pass
 
 def testIt(url):
+
 	headers={"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0","Host":"xyele.com"}
 	r = requests.head(url,allow_redirects = False,verify=False,headers=headers,timeout = int(args["timeout"]))
 	try:
 		if r.headers["Location"].replace("https://","").replace("http://","").startswith("xyele.com"):
-			if args["clear"]:
-				print(url)
-				pass
-			else:
-				print(colored("[+] {} redirects to {}".format(url,r.headers["Location"]),"green"))
-				pass
+			print(url) if args["clear"] else print(colored("[+] {} redirects to {}".format(url,r.headers["Location"]),"green"))
 			pass
 		else:
-			if not args["clear"]:
-				print(colored("[-] {}".format(url),"red"))
-				pass
+			not args["clear"] and print(colored("[-] {}".format(url),"red"))
 			pass
 		pass
 	except Exception as e:
-		if not args["clear"]:
-			print(colored("[-] {}".format(url),"red"))
+			not args["clear"] and print(colored("[-] {}".format(url),"red"))
 			pass
-		pass
 prBanner()
 hostList = open(args["list"], "r").read().split("\n")
 for host in hostList:
