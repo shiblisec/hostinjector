@@ -35,7 +35,7 @@ def testIt(url):
 	r = requests.head(url,allow_redirects = False,verify=False,headers=headers,timeout = int(args["timeout"]))
 	try:
 		if r.headers["Location"].replace("https://","").replace("http://","").startswith("xyele.com"):
-			print(url) if args["clear"] else print(colored("[+] {} redirects to {}".format(url,r.headers["Location"]),"green"))
+			print(url) if args["clear"] else print(colored("[+] {} redirects to {}".format(url,r.headers["Location"]),"green")+"\n\n"+r.text+"\n\n")
 			pass
 		else:
 			not args["clear"] and print(colored("[-] {}".format(url),"red"))
