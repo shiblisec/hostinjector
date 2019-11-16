@@ -31,7 +31,6 @@ def prBanner():
 	pass
 
 def testIt(url):
-
 	headers={"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0","Host":"xyele.com"}
 	r = requests.head(url,allow_redirects = False,verify=False,headers=headers,timeout = int(args["timeout"]))
 	try:
