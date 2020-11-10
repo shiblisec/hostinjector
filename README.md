@@ -1,6 +1,5 @@
 # HostInjector
 Multithreaded Host Header Redirection Attack Scanner
-[![asciicast](https://asciinema.org/a/BJAYTVKUGOJLwxaas0usPc9I7.svg)](https://asciinema.org/a/BJAYTVKUGOJLwxaas0usPc9I7)
 
 #### Usage
 ```
@@ -17,5 +16,6 @@ optional arguments:
 #### Example Usage
 `python3 hostinjector.py --list hostList.txt --threads 10 --timeout 7`
 
-#### Contact
+
+#### Original Author
 twitter.com/zeroxyele
