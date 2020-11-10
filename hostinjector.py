@@ -21,7 +21,7 @@ def prBanner():
 	pass
 
 def testIt(url):
-	headers={"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0","Host":"127.0.0.1", "X-Forwarded-For": "127.0.0.1"}
+	headers={"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0","Host":"evil.com", "X-Forwarded-For": "evil.com"}
 	r = requests.head(url,allow_redirects = False,verify=False,headers=headers,timeout = int(args["timeout"]))
 	try:
 		if r.headers["Location"].replace("https://","").replace("http://","").startswith("xyele.com"):
