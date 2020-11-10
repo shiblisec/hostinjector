@@ -1,6 +1,8 @@
 # HostInjector
 Multithreaded Host Header Redirection Attack Scanner
 
+![](ezgif.com-gif-maker (1).gif)
+
 #### Usage
 ```
 usage: hostinjector.py [-h] --list LIST --threads THREADS --timeout TIMEOUT
