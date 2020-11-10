@@ -1,7 +1,7 @@
 # HostInjector
 Multithreaded Host Header Redirection Attack Scanner
 
-![](ezgif.com-gif-maker (1).gif)
+![](ss.gif)
 
 #### Usage
 ```
